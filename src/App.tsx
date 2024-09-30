@@ -117,7 +117,7 @@ export default function TestPilot() {
 
   const handleMessage = (event: MessageEvent) => {
     if (isRecording) {
-      const { action, target, timestamp } = event.data;
+      const { action, timestamp } = event.data;
       const screenshot = captureScreenshot();
       setRecordedSteps((prev) => [...prev, { action, timestamp, screenshot }]);
     }
